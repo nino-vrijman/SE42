@@ -12,10 +12,10 @@ import javax.persistence.Persistence;
 
 import java.sql.SQLException;
 
+import static junit.framework.TestCase.assertFalse;
+import static junit.framework.TestCase.assertSame;
 import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by Kevin on 25-4-2016.
@@ -61,26 +61,22 @@ public class AssignmentOne {
         // Dit is de code om te kijken of ook daadwerkelijk alle accounts zijn verwijdert.
         AccountDAOJPAImpl accountDAOJPA = new AccountDAOJPAImpl(em);
         assertEquals(accountDAOJPA.count(), 0);
-        dbCleaner.clean();
     }
 
     //Vraag 3 : Flushen maar
+    //todo wtf deze shit is gaar en werkt niet
     @Test
     public void opgave3() throws SQLException {
         Long expected = -100L;
         Account account = new Account(111L);
-        account.setId(expected);
-        System.out.println(account.getId());
         em.getTransaction().begin();
         em.persist(account);
-        System.out.println(account.getId());
-        //TODO: verklaar en pas eventueel aan
+        account.setId(expected);
         assertNotEquals(expected, account.getId());
         em.flush();
-        System.out.println(account.getId());
-        //TODO: verklaar en pas eventueel aan
         assertEquals(expected, account.getId());
         em.getTransaction().commit();
+
     }
 
     //Opdracht 4 ; Veranderingen na de persist
@@ -105,16 +101,15 @@ public class AssignmentOne {
     }
 
     /**
+        //Opdracht 5 : Refresh
      * In de vorige opdracht verwijzen de objecten account en found naar dezelfde rij in de database.
      * Pas een van de objecten aan, persisteer naar de database.
      * Refresh vervolgens het andere object om de veranderde state uit de database te halen.
      * Test met asserties dat dit gelukt is.
      */
-    //todo deze opgave is not niet gemaakt
+    //todo comments toevoegen
     @Test
     public void opgave5() throws  SQLException{
-        //Opdracht 5 : Refresh
-
         Long expectedBalance = 400L;
         Account account = new Account(114L);
         em.getTransaction().begin();
@@ -127,6 +122,133 @@ public class AssignmentOne {
         em2.getTransaction().begin();
         Account found = em2.find(Account.class, acId);
         assertEquals(expectedBalance, found.getBalance());
+        Long newExpected = 350L;
+        found.setBalance(newExpected);
+        em2.getTransaction().commit();
+        em.refresh(account);
+        assertEquals(newExpected, account.getBalance());
+    }
+
+    //Opdracht 6 : Merge
+    //todo deze opdracht is nog niet gedaan
+    @Test
+    public void opgave6() throws SQLException{
+        Account acc = new Account(1L);
+        Account acc2;
+        Account acc9;
+
+// scenario 1
+        Long balance1 = 100L;
+        em.getTransaction().begin();
+        em.persist(acc);
+        acc.setBalance(balance1);
+        em.getTransaction().commit();
+        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifieren.
+        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
+
+
+// scenario 2
+        Long balance2a = 211L;
+        acc = new Account(2L);
+        em.getTransaction().begin();
+        acc9 = em.merge(acc);
+        acc.setBalance(balance2a);
+        acc9.setBalance(balance2a+balance2a);
+        em.getTransaction().commit();
+        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifiëren.
+        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
+        // HINT: gebruik acccountDAO.findByAccountNr
+
+
+// scenario 3
+        Long balance3b = 322L;
+        Long balance3c = 333L;
+        acc = new Account(3L);
+        em.getTransaction().begin();
+        acc2 = em.merge(acc);
+        assertTrue(em.contains(acc)); // todo verklaar
+        assertTrue(em.contains(acc2)); // todo verklaar
+        assertEquals(acc,acc2);  //todo verklaar
+        acc2.setBalance(balance3b);
+        acc.setBalance(balance3c);
+        em.getTransaction().commit();
+        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifiëren.
+        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
+
+        // scenario 4
+        Account account = new Account(114L);
+        account.setBalance(450L);
+        EntityManager em = factory.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(account);
+        em.getTransaction().commit();
+
+        Account account2 = new Account(114L);
+        Account tweedeAccountObject = account2;
+        tweedeAccountObject.setBalance(650l);
+        assertEquals((Long)650L,account2.getBalance());  //todo verklaar
+        account2.setId(account.getId());
+        em.getTransaction().begin();
+        account2 = em.merge(account2);
+        assertSame(account,account2);  //todo verklaar
+        assertTrue(em.contains(account2));  //todo verklaar
+        assertFalse(em.contains(tweedeAccountObject));  //todo verklaar
+        tweedeAccountObject.setBalance(850l);
+        assertEquals((Long)650L,account.getBalance());  //todo verklaar
+        assertEquals((Long)650L,account2.getBalance());  //todo verklaar
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    //Opdracht 7
+    @Test
+    public void opdracht7() throws SQLException{
+        Account acc1 = new Account(77L);
+        em.getTransaction().begin();
+        em.persist(acc1);
+        em.getTransaction().commit();
+        //Database bevat nu een account.
+
+        // scenario 1
+        Account accF1;
+        Account accF2;
+        accF1 = em.find(Account.class, acc1.getId());
+        accF2 = em.find(Account.class, acc1.getId());
+        assertSame(accF1, accF2);
+
+        // scenario 2
+        accF1 = em.find(Account.class, acc1.getId());
+        em.clear();
+        accF2 = em.find(Account.class, acc1.getId());
+        assertNotSame(accF1, accF2); //Dit verandert naar NotSame
+        //Bij dit scenario wordt de entitymanager gecleared. Alle gemanagde entities worden losgelaten.
+        //Als hij nu weer opzoek gaat naar de objecten in de database zal hij hier nieuwe objecten van maken ipv een referentie naar de oude hebben.
+    }
+
+    //Opdracht 8
+    @Test
+    public void opdracht8() throws  SQLException{
+        Account acc1 = new Account(88L);
+        em.getTransaction().begin();
+        em.persist(acc1);
+        em.getTransaction().commit();
+        Long id = acc1.getId();
+        //Database bevat nu een account.
+        em.remove(acc1);
+        assertEquals(id, acc1.getId()); //Hij returned hier nog true omdat de entiteit van account nog niet ververst is
+        Account accFound = em.find(Account.class, id); // Hij zoekt nu naar het account en kan deze niet vinden omdat hij verwijdert is
+        assertNull(accFound);
+    }
+
+    //Opdracht 9
+    /**
+     * Opgave 1 heb je uitgevoerd met @GeneratedValue(strategy = GenerationType.IDENTITY)
+     Voer dezelfde opdracht nu uit met GenerationType SEQUENCE en TABLE.
+     Verklaar zowel de verschillen in testresultaat als verschillen van de database structuur.s
+     */
+    //todo deze opdracht is nog niet gemaakt
+    @Test
+    public void opdracht9() throws SQLException{
 
     }
 }
