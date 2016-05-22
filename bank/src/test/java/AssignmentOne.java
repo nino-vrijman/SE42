@@ -47,7 +47,6 @@ public class AssignmentOne {
         System.out.println("AccountId: " + account.getId());
         //De transactie is doorgevoerd dus het account is nu bekend
         assertTrue(account.getId() > 0L);
-        dbCleaner.clean();
     }
 
     //Vraag 2 : Rollback
@@ -64,17 +63,18 @@ public class AssignmentOne {
     }
 
     //Vraag 3 : Flushen maar
-    //todo wtf deze shit is gaar en werkt niet
     @Test
     public void opgave3() throws SQLException {
         Long expected = -100L;
         Account account = new Account(111L);
+        account.setId(expected);
         em.getTransaction().begin();
         em.persist(account);
-        account.setId(expected);
-        assertNotEquals(expected, account.getId());
-        em.flush();
+        //Er is nog niet gecommit dus het account heeft nog steeds geen id van de database
         assertEquals(expected, account.getId());
+        em.flush();
+        //Flush zet het nog niet in de database maar controlleerd de data wel
+        assertNotEquals(expected, account.getId());
         em.getTransaction().commit();
 
     }
@@ -107,7 +107,6 @@ public class AssignmentOne {
      * Refresh vervolgens het andere object om de veranderde state uit de database te halen.
      * Test met asserties dat dit gelukt is.
      */
-    //todo comments toevoegen
     @Test
     public void opgave5() throws  SQLException{
         Long expectedBalance = 400L;
@@ -116,26 +115,30 @@ public class AssignmentOne {
         em.persist(account);
         account.setBalance(expectedBalance);
         em.getTransaction().commit();
+        //Account wordt naar de database gecommmit
         assertEquals(expectedBalance, account.getBalance());
         Long acId = account.getId();
         EntityManager em2 = factory.createEntityManager();
         em2.getTransaction().begin();
+        //Tweede account wordt opgevraagd aan de hand van het id van het eerste account. Dit is dus hetzelfde account in de database
         Account found = em2.find(Account.class, acId);
         assertEquals(expectedBalance, found.getBalance());
         Long newExpected = 350L;
         found.setBalance(newExpected);
+        //De balance wordt verandert in het tweede account
         em2.getTransaction().commit();
+        //Het eerste account wordt geupdate volgens de data die in de database staat
         em.refresh(account);
+        //Het nieuwe bedrag komt overeen
         assertEquals(newExpected, account.getBalance());
     }
 
     //Opdracht 6 : Merge
-    //todo deze opdracht is nog niet gedaan
     @Test
     public void opgave6() throws SQLException{
         Account acc = new Account(1L);
+        Account acc1;
         Account acc2;
-        Account acc9;
 
 // scenario 1
         Long balance1 = 100L;
@@ -143,37 +146,35 @@ public class AssignmentOne {
         em.persist(acc);
         acc.setBalance(balance1);
         em.getTransaction().commit();
-        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifieren.
-        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
+        assertEquals(balance1, acc.getBalance());
 
 
 // scenario 2
         Long balance2a = 211L;
-        acc = new Account(2L);
+        Long balance2b = 422L;
         em.getTransaction().begin();
-        acc9 = em.merge(acc);
+        acc2 = em.merge(acc);
         acc.setBalance(balance2a);
-        acc9.setBalance(balance2a+balance2a);
+        acc2.setBalance(balance2b);
         em.getTransaction().commit();
-        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifiëren.
-        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
-        // HINT: gebruik acccountDAO.findByAccountNr
-
+        assertEquals(balance2b, acc.getBalance());
+        assertEquals(balance2b, acc2.getBalance());
+        //De set van acc naar balance2a wordt overschreven omdat acc2 later geset wordt.
 
 // scenario 3
         Long balance3b = 322L;
         Long balance3c = 333L;
-        acc = new Account(3L);
         em.getTransaction().begin();
-        acc2 = em.merge(acc);
-        assertTrue(em.contains(acc)); // todo verklaar
-        assertTrue(em.contains(acc2)); // todo verklaar
-        assertEquals(acc,acc2);  //todo verklaar
-        acc2.setBalance(balance3b);
+        acc1 = em.merge(acc);
+        assertTrue(em.contains(acc)); // acc bestaat al in de persistence
+        assertTrue(em.contains(acc1)); // acc1 wordt gemerged en is dus bekend
+        assertEquals(acc,acc1);  //acc1 wordt gemerged van acc dus komen overeen
+        acc1.setBalance(balance3b);
         acc.setBalance(balance3c);
         em.getTransaction().commit();
-        //TODO: voeg asserties toe om je verwachte waarde van de attributen te verifiëren.
-        //TODO: doe dit zowel voor de bovenstaande java objecten als voor opnieuw bij de entitymanager opgevraagde objecten met overeenkomstig Id.
+        assertEquals(balance3c, acc1.getBalance());
+        assertEquals(balance3c, acc.getBalance());
+        //Net zoals bij scenario 2 wordt de balance van acc1 overschreven door de latere set van acc
 
         // scenario 4
         Account account = new Account(114L);
@@ -186,16 +187,16 @@ public class AssignmentOne {
         Account account2 = new Account(114L);
         Account tweedeAccountObject = account2;
         tweedeAccountObject.setBalance(650l);
-        assertEquals((Long)650L,account2.getBalance());  //todo verklaar
+        assertEquals((Long)650L,account2.getBalance()); //tweedeAccountObject is een reference naar account2
         account2.setId(account.getId());
         em.getTransaction().begin();
         account2 = em.merge(account2);
-        assertSame(account,account2);  //todo verklaar
-        assertTrue(em.contains(account2));  //todo verklaar
-        assertFalse(em.contains(tweedeAccountObject));  //todo verklaar
+        assertSame(account,account2);  //Ze hebben hetzelfde ID, de merge zal dus de gegevens syncen
+        assertTrue(em.contains(account2));  //account 2 staat gelijk aan account en deze is bekend
+        assertFalse(em.contains(tweedeAccountObject));  //deze heeft een ander ID en is niet gecommit
         tweedeAccountObject.setBalance(850l);
-        assertEquals((Long)650L,account.getBalance());  //todo verklaar
-        assertEquals((Long)650L,account2.getBalance());  //todo verklaar
+        assertEquals((Long)650L,account.getBalance());
+        assertEquals((Long)650L,account2.getBalance()); //De accounts zijn gemerged dus hebben beiden 650 als balance
         em.getTransaction().commit();
         em.close();
     }
@@ -246,9 +247,13 @@ public class AssignmentOne {
      Voer dezelfde opdracht nu uit met GenerationType SEQUENCE en TABLE.
      Verklaar zowel de verschillen in testresultaat als verschillen van de database structuur.s
      */
-    //todo deze opdracht is nog niet gemaakt
     @Test
     public void opdracht9() throws SQLException{
-
+        /*
+        Bij Sequence runnen alle tests nog steeds positief, het verschil bij sequence is dat een automatische value wordt gegenreerd als er een
+        object wordt gepersist. Dus nog voor de commit. Dit heeft verder geen impact op onze tests maar kan handig zijn als je de primary key value eerder nodig hebt.
+        Bij table runnen alle tests negatief.
+        Online heb ik gelezen dat bij TABLE initialValue op 1 gezet moet worden in de @sequenceGenerator terwijl de andere bij 0 beginnen
+               */
     }
 }
