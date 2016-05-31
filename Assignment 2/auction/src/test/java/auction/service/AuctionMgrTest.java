@@ -72,6 +72,7 @@ public class AuctionMgrTest {
         User seller = registrationMgr.registerUser(email);
         User buyer = registrationMgr.registerUser(emailb);
         User buyer2 = registrationMgr.registerUser(emailb2);
+
         // eerste bod
         Category cat = new Category("cat9");
         Item item1 = sellerMgr.offerItem(seller, cat, omsch);

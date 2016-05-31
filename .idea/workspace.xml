@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95fa1e4d-fb4b-4cc5-972c-0d98337dd20e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bank/bank.iml" afterPath="$PROJECT_DIR$/bank/bank.iml" />
-    </list>
+    <list default="true" id="95fa1e4d-fb4b-4cc5-972c-0d98337dd20e" name="Default" comment="" />
     <ignored path="SE42.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bank/target/" />
@@ -61,24 +55,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountDAOJPAImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AccountDAOJPAImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/dao/AccountDAOJPAImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#332#333#0" expanded="false" />
-                <element signature="e#360#361#0" expanded="false" />
-                <element signature="e#403#404#0" expanded="false" />
-                <element signature="e#438#439#0" expanded="false" />
-                <element signature="e#479#480#0" expanded="false" />
-                <element signature="e#512#513#0" expanded="false" />
-                <element signature="e#555#556#0" expanded="false" />
-                <element signature="e#599#600#0" expanded="false" />
-                <element signature="e#635#636#0" expanded="false" />
-                <element signature="e#684#685#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.14592275">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bank/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56463593">
+            <state vertical-scroll-proportion="-14.615385">
               <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="53" selection-end-column="17" />
               <folding />
             </state>
@@ -353,6 +335,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SE42" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SE42" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -785,7 +823,7 @@
       <workItem from="1464080149652" duration="540000" />
       <workItem from="1464186658931" duration="766000" />
       <workItem from="1464449870783" duration="617000" />
-      <workItem from="1464620610928" duration="3167000" />
+      <workItem from="1464620610928" duration="3328000" />
     </task>
     <servers />
   </component>
@@ -804,7 +842,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11365000" />
+    <option name="totallyTimeSpent" value="11526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -886,19 +924,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#684#685#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,19 +1030,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#684#685#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,19 +1136,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#684#685#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,19 +1242,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#684#685#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,26 +1323,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/dao/AccountDAOJPAImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#360#361#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#684#685#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1448,8 +1418,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bank/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56463593">
+        <state vertical-scroll-proportion="-14.615385">
           <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/dao/AccountDAOJPAImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14592275">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
