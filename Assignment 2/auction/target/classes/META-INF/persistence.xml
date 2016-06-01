@@ -3,7 +3,6 @@
   <persistence-unit name="Auction" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <shared-cache-mode>NONE</shared-cache-mode>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <class>auction.domain.User</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/fontys"/>

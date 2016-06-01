@@ -3,6 +3,10 @@ package auction.domain;
 import javax.persistence.*;
 
 @Entity @Table(name="USER")
+@NamedQueries({
+        @NamedQuery(name = "User.findByEmail", query = "select u from User as u where u.email = :email"),
+        @NamedQuery(name = "User.count", query = "select count(u) from User as u")
+})
 public class User {
 
     @Id @GeneratedValue

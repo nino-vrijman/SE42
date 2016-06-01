@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="auction.service.RegistrationMgrTest" time="0.007" errors="3" skipped="0">
+<testsuite tests="3" failures="0" name="auction.service.JPARegistrationMgrTest" time="0.068" errors="3" skipped="0">
   <properties>
     <property name="idea.version" value="15.0.6"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,14 +63,14 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="auction.service.RegistrationMgrTest" name="registerUser" time="0">
+  <testcase classname="auction.service.JPARegistrationMgrTest" name="registerUser" time="0">
     <error message="getSingleResult() did not retrieve any entities." type="javax.persistence.NoResultException">javax.persistence.NoResultException: getSingleResult() did not retrieve any entities.
 	at org.eclipse.persistence.internal.jpa.QueryImpl.throwNoResultException(QueryImpl.java:971)
 	at org.eclipse.persistence.internal.jpa.QueryImpl.getSingleResult(QueryImpl.java:521)
 	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.getSingleResult(EJBQueryImpl.java:400)
 	at auction.dao.UserDAOJPAImpl.findByEmail(UserDAOJPAImpl.java:93)
 	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:46)
-	at auction.service.RegistrationMgrTest.registerUser(RegistrationMgrTest.java:23)
+	at auction.service.JPARegistrationMgrTest.registerUser(JPARegistrationMgrTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,18 +102,18 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.129--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.056--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xxx1@yyy]
 </system-out>
   </testcase>
-  <testcase classname="auction.service.RegistrationMgrTest" name="getUser" time="0">
+  <testcase classname="auction.service.JPARegistrationMgrTest" name="getUser" time="0.001">
     <error message="getSingleResult() did not retrieve any entities." type="javax.persistence.NoResultException">javax.persistence.NoResultException: getSingleResult() did not retrieve any entities.
 	at org.eclipse.persistence.internal.jpa.QueryImpl.throwNoResultException(QueryImpl.java:971)
 	at org.eclipse.persistence.internal.jpa.QueryImpl.getSingleResult(QueryImpl.java:521)
 	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.getSingleResult(EJBQueryImpl.java:400)
 	at auction.dao.UserDAOJPAImpl.findByEmail(UserDAOJPAImpl.java:93)
 	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:46)
-	at auction.service.RegistrationMgrTest.getUser(RegistrationMgrTest.java:35)
+	at auction.service.JPARegistrationMgrTest.getUser(JPARegistrationMgrTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -145,18 +145,18 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.168--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.062--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xxx5@yyy5]
 </system-out>
   </testcase>
-  <testcase classname="auction.service.RegistrationMgrTest" name="getUsers" time="0">
+  <testcase classname="auction.service.JPARegistrationMgrTest" name="getUsers" time="0">
     <error message="getSingleResult() did not retrieve any entities." type="javax.persistence.NoResultException">javax.persistence.NoResultException: getSingleResult() did not retrieve any entities.
 	at org.eclipse.persistence.internal.jpa.QueryImpl.throwNoResultException(QueryImpl.java:971)
 	at org.eclipse.persistence.internal.jpa.QueryImpl.getSingleResult(QueryImpl.java:521)
 	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.getSingleResult(EJBQueryImpl.java:400)
 	at auction.dao.UserDAOJPAImpl.findByEmail(UserDAOJPAImpl.java:93)
 	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:46)
-	at auction.service.RegistrationMgrTest.getUsers(RegistrationMgrTest.java:48)
+	at auction.service.JPARegistrationMgrTest.getUsers(JPARegistrationMgrTest.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -188,8 +188,8 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.175--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER
-[EL Fine]: sql: 2016-06-01 19:51:27.176--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2016-06-01 19:51:27.119--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER
+[EL Fine]: sql: 2016-06-01 19:51:27.12--ServerSession(22429093)--Connection(1947666055)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xxx8@yyy]
 </system-out>
   </testcase>
