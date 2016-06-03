@@ -2,13 +2,27 @@ package auction.domain;
 
 import nl.fontys.util.Money;
 
+import javax.persistence.*;
+
+@Entity @Table(name = "ITEM")
+@NamedQueries({
+        @NamedQuery(name = "Item.findById", query = "select i from Item as i where i.id = :itemId"),
+        @NamedQuery(name = "Item.findByDescription", query = "select i from Item as i where i.description = :description"),
+        @NamedQuery(name = "Item.count", query = "select count(i) from Item as i")
+})
 public class Item implements Comparable {
 
+    @Id @GeneratedValue
     private Long id;
+    @ManyToOne
     private User seller;
+    @ManyToOne
     private Category category;
     private String description;
+    @ManyToOne
     private Bid highest;
+
+    public Item() {}
 
     public Item(User seller, Category category, String description) {
         this.seller = seller;
