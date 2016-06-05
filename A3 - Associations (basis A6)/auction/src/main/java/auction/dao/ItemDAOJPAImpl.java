@@ -4,6 +4,7 @@ import auction.domain.Item;
 import auction.domain.User;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
@@ -15,8 +16,8 @@ public class ItemDAOJPAImpl implements ItemDAO {
 
     private final EntityManager em;
 
-    public ItemDAOJPAImpl(EntityManager em) {
-        this.em = em;
+    public ItemDAOJPAImpl() {
+        this.em = Persistence.createEntityManagerFactory("Auction").createEntityManager();
     }
 
     @Override
@@ -68,6 +69,8 @@ public class ItemDAOJPAImpl implements ItemDAO {
 
     @Override
     public void remove(Item item) {
+        em.getTransaction().begin();
         em.remove(em.merge(item));
+        em.getTransaction().commit();
     }
 }
