@@ -61,7 +61,8 @@ public class ItemDAOJPAImpl implements ItemDAO {
         q.setParameter("description", description);
         try {
             //  Try block omdat als er geen result gevonden wordt er een exception wordt opgegooid
-            return (List<Item>)q.getResultList();
+            List<Item> foundItems = (List<Item>)q.getResultList();
+            return foundItems;
         } catch (Exception ex) {
             return null;
         }

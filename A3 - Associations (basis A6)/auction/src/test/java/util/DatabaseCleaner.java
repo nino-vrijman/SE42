@@ -31,6 +31,7 @@ public class DatabaseCleaner {
 
     private void deleteEntities(Class<?> entityType) {
         em.createQuery("delete from " + getEntityName(entityType)).executeUpdate();
+        System.out.println("Deleted table: " + getEntityName(entityType));
     }
 
     protected String getEntityName(Class<?> clazz) {

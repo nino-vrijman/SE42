@@ -43,10 +43,10 @@ public class AuctionMgr  {
      */
     public List<Item> findItemByDescription(String description) {
         em.getTransaction().begin();
-        List<Item> items = null;
+        List<Item> items = new ArrayList<Item>();
         items = itemDAO.findByDescription(description);
         em.getTransaction().commit();
-        return (ArrayList<Item>)items;
+        return items;
     }
 
     /**

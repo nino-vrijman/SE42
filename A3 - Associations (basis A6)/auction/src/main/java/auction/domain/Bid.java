@@ -7,12 +7,13 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Bid.getAll", query = "select b from Bid as b"),
-        @NamedQuery(name = "Bid.count", query = "select count(b) from Bid as b")
+        @NamedQuery(name = "Bid.count", query = "select count(b) from Bid as b"),
+        @NamedQuery(name = "Bid.findById", query = "select b from Bid as b where b.id = :bidId")
 })
 public class Bid {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Embedded

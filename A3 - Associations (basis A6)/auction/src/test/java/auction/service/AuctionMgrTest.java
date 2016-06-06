@@ -17,6 +17,7 @@ import util.DatabaseCleaner;
 import javax.persistence.Persistence;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AuctionMgrTest {
 
@@ -28,6 +29,7 @@ public class AuctionMgrTest {
     public void setUp() throws Exception {
         DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
         dbCleaner.clean();
+
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
         sellerMgr = new SellerMgr();
@@ -43,8 +45,7 @@ public class AuctionMgrTest {
 
     @After
     public void cleanUp() throws SQLException {
-        DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
-        dbCleaner.clean();
+
     }
 
     @Test
@@ -74,10 +75,12 @@ public class AuctionMgrTest {
         Item item1 = sellerMgr.offerItem(seller3, cat, omsch);
         Item item2 = sellerMgr.offerItem(seller4, cat, omsch);
 
-        ArrayList<Item> res = (ArrayList<Item>) auctionMgr.findItemByDescription(omsch2);
+        //  Cast error van Vector to ArrayList
+        //  Oude code: ArrayList<Item> res = (ArrayList<Item>) auctionMgr.findItemByDescription(omsch2);
+        List<Item> res = auctionMgr.findItemByDescription(omsch2);
         assertEquals(0, res.size());
 
-        res = (ArrayList<Item>) auctionMgr.findItemByDescription(omsch);
+        res = auctionMgr.findItemByDescription(omsch);
         assertEquals(2, res.size());
 
     }
@@ -90,7 +93,9 @@ public class AuctionMgrTest {
         String emailb2 = "bb2@nl";
         String omsch = "omsch_bb";
 
-        User seller = registrationMgr.registerUser(email);
+        //  Moet gewijzigd worden ivm duplicate key ...
+        //User seller = registrationMgr.registerUser(email);
+        User seller = new User(email);
         User buyer = registrationMgr.registerUser(emailb);
         User buyer2 = registrationMgr.registerUser(emailb2);
 

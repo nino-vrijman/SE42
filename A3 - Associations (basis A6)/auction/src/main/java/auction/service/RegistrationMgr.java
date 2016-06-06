@@ -20,12 +20,11 @@ public class RegistrationMgr {
     }
     */
 
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auction");
     private UserDAO userDAO;
     private EntityManager em;
 
     public RegistrationMgr() {
-        this.em = emf.createEntityManager();
+        this.em = Persistence.createEntityManagerFactory("Auction").createEntityManager();
         this.userDAO = new UserDAOJPAImpl(em);
     }
 
@@ -47,6 +46,8 @@ public class RegistrationMgr {
 
         User user = userDAO.findByEmail(email);
 
+        em.getTransaction().commit();
+
         if (user != null) {
             return user;
         }
@@ -54,7 +55,9 @@ public class RegistrationMgr {
         user = new User(email);
 
         userDAO.create(user);
-        em.getTransaction().commit();
+
+        //  TODO dezelfde verplaatsen naar boven if user != null
+        //em.getTransaction().commit();
 
         return user;
     }

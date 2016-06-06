@@ -9,7 +9,8 @@ import javax.persistence.*;
 })
 public class User {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
 
@@ -18,7 +19,6 @@ public class User {
 
     public User(String email) {
         this.email = email;
-
     }
 
     public String getEmail() {

@@ -35,7 +35,14 @@ public class BidDAOJPAImpl implements BidDAO {
 
     @Override
     public Bid find(Long id) {
-        return (Bid) em.find(Bid.class, id);
+        Query q = em.createNamedQuery("Bid.findById", Bid.class);
+        q.setParameter("bidId", id);
+        try {
+            //  Try block omdat als er geen result gevonden wordt er een exception wordt opgegooid
+            return (Bid) q.getSingleResult();
+        } catch (Exception ex) {
+            return null;
+        }
     }
 
     @Override
@@ -47,6 +54,7 @@ public class BidDAOJPAImpl implements BidDAO {
     @Override
     public void remove(Bid bid) {
         em.remove(bid);
+        //em.remove(em.merge(bid));
     }
     
 }
