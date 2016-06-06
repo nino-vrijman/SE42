@@ -1,20 +1,28 @@
 package auction.service;
 
+import auction.dao.BidDAOJPAImpl;
 import auction.dao.ItemDAO;
 import auction.dao.ItemDAOJPAImpl;
 import nl.fontys.util.Money;
 import auction.domain.Bid;
 import auction.domain.Item;
 import auction.domain.User;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AuctionMgr  {
 
-    ItemDAO itemDAO;
+    private ItemDAO itemDAO;
+    private BidDAOJPAImpl bidDAO;
+    private EntityManager em;
 
     public AuctionMgr(){
-        itemDAO = new ItemDAOJPAImpl();
+        this.em = Persistence.createEntityManagerFactory("Auction").createEntityManager();
+        itemDAO = new ItemDAOJPAImpl(em);
+        bidDAO = new BidDAOJPAImpl(em);
     }
    /**
      * @param id
@@ -22,7 +30,10 @@ public class AuctionMgr  {
      *         geretourneerd
      */
     public Item getItem(Long id) {
-        return itemDAO.find(id);
+        em.getTransaction().begin();
+        Item item = itemDAO.find(id);
+        em.getTransaction().commit();
+        return item;
     }
 
   
@@ -31,7 +42,11 @@ public class AuctionMgr  {
      * @return een lijst met items met @desciption. Eventueel lege lijst.
      */
     public List<Item> findItemByDescription(String description) {
-        return itemDAO.findByDescription(description);
+        em.getTransaction().begin();
+        List<Item> items = null;
+        items = itemDAO.findByDescription(description);
+        em.getTransaction().commit();
+        return (ArrayList<Item>)items;
     }
 
     /**
@@ -42,6 +57,13 @@ public class AuctionMgr  {
      *         amount niet hoger was dan het laatste bod, dan null
      */
     public Bid newBid(Item item, User buyer, Money amount) {
-        return item.newBid(buyer,amount);
+        Bid bid = item.newBid(buyer, amount);
+        if (bid != null) {
+            em.getTransaction().begin();
+            this.bidDAO.create(bid);
+            this.itemDAO.edit(item);
+            em.getTransaction().commit();
+        }
+        return bid;
     }
 }

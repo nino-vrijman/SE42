@@ -4,7 +4,7 @@ import nl.fontys.util.Money;
 
 import javax.persistence.*;
 
-@Entity @Table(name = "ITEM")
+@Entity
 @NamedQueries({
         @NamedQuery(name = "Item.findById", query = "select i from Item as i where i.id = :itemId"),
         @NamedQuery(name = "Item.findByDescription", query = "select i from Item as i where i.description = :description"),
@@ -14,12 +14,15 @@ public class Item implements Comparable {
 
     @Id @GeneratedValue
     private Long id;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     private User seller;
-    @ManyToOne
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="description", column = @Column(name="c_description"))
+    })
     private Category category;
     private String description;
-    @ManyToOne
+    @OneToOne (cascade = {CascadeType.ALL})
     private Bid highest;
 
     public Item() {}

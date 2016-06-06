@@ -1,10 +1,13 @@
 package auction.domain;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Category {
 
     private String description;
 
-    private Category() {
+    public Category() {
         description = "undefined";
     }
 

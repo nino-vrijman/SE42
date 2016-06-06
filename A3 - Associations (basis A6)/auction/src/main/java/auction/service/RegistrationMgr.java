@@ -52,13 +52,9 @@ public class RegistrationMgr {
         }
 
         user = new User(email);
-        try {
-            userDAO.create(user);
-            em.getTransaction().commit();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            em.getTransaction().rollback();
-        }
+
+        userDAO.create(user);
+        em.getTransaction().commit();
 
         return user;
     }

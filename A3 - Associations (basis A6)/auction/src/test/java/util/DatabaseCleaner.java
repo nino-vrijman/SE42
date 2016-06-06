@@ -1,5 +1,7 @@
 package util;
 
+import auction.domain.Bid;
+import auction.domain.Item;
 import auction.domain.User;
 
 import javax.persistence.EntityManager;
@@ -9,7 +11,7 @@ import java.sql.SQLException;
 public class DatabaseCleaner {
 
     private static final Class<?>[] ENTITY_TYPES = {
-        User.class
+        Item.class, Bid.class, User.class
     };
     private final EntityManager em;
 

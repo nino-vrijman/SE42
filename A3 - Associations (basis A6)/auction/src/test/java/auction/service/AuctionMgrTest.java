@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import nl.fontys.util.Money;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +12,10 @@ import auction.domain.Bid;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import util.DatabaseCleaner;
+
+import javax.persistence.Persistence;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class AuctionMgrTest {
@@ -21,9 +26,25 @@ public class AuctionMgrTest {
 
     @Before
     public void setUp() throws Exception {
+        DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
+        dbCleaner.clean();
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
         sellerMgr = new SellerMgr();
+    }
+
+    /*
+    @Test
+    public void clean() throws SQLException {
+        DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
+        dbCleaner.clean();
+    }
+    */
+
+    @After
+    public void cleanUp() throws SQLException {
+        DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
+        dbCleaner.clean();
     }
 
     @Test

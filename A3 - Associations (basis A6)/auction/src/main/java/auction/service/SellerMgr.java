@@ -1,15 +1,27 @@
 package auction.service;
 
-import auction.dao.ItemDAOJPAImpl;
+import auction.dao.*;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 public class SellerMgr {
 
-    ItemDAOJPAImpl itemDAOJPA;
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("Auction");
+    private ItemDAOJPAImpl itemDAOJPA;
+    private BidDAO bidDAO;
+    private UserDAO userDAO;
+    private EntityManager em;
+
     public SellerMgr(){
-        itemDAOJPA = new ItemDAOJPAImpl();
+        this.em = this.emf.createEntityManager();
+        this.itemDAOJPA = new ItemDAOJPAImpl(em);
+        this.bidDAO = new BidDAOJPAImpl(em);
+        this.userDAO = new UserDAOJPAImpl(em);
     }
     /**
      * @param seller
@@ -20,7 +32,9 @@ public class SellerMgr {
      */
     public Item offerItem(User seller, Category cat, String description) {
         Item item = new Item(seller,cat,description);
+        em.getTransaction().begin();
         itemDAOJPA.create(item);
+        em.getTransaction().commit();
         return item;
     }
     
@@ -31,11 +45,13 @@ public class SellerMgr {
      */
     public boolean revokeItem(Item item) {
         boolean returnValue = false;
+        em.getTransaction().begin();
         Item foundItem = itemDAOJPA.find(item.getId());
         if(foundItem.getHighestBid() == null){
             itemDAOJPA.remove(foundItem);
             returnValue = true;
         }
+        em.getTransaction().commit();
         return returnValue;
     }
 }

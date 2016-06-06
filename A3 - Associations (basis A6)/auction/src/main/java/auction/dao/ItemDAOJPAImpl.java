@@ -16,8 +16,8 @@ public class ItemDAOJPAImpl implements ItemDAO {
 
     private final EntityManager em;
 
-    public ItemDAOJPAImpl() {
-        this.em = Persistence.createEntityManagerFactory("Auction").createEntityManager();
+    public ItemDAOJPAImpl(EntityManager em) {
+        this.em = em;
     }
 
     @Override
@@ -61,7 +61,7 @@ public class ItemDAOJPAImpl implements ItemDAO {
         q.setParameter("description", description);
         try {
             //  Try block omdat als er geen result gevonden wordt er een exception wordt opgegooid
-            return q.getResultList();
+            return (List<Item>)q.getResultList();
         } catch (Exception ex) {
             return null;
         }
@@ -69,8 +69,6 @@ public class ItemDAOJPAImpl implements ItemDAO {
 
     @Override
     public void remove(Item item) {
-        em.getTransaction().begin();
         em.remove(em.merge(item));
-        em.getTransaction().commit();
     }
 }
