@@ -93,9 +93,7 @@ public class AuctionMgrTest {
         String emailb2 = "bb2@nl";
         String omsch = "omsch_bb";
 
-        //  Moet gewijzigd worden ivm duplicate key ...
-        //User seller = registrationMgr.registerUser(email);
-        User seller = new User(email);
+        User seller = registrationMgr.registerUser(email);
         User buyer = registrationMgr.registerUser(emailb);
         User buyer2 = registrationMgr.registerUser(emailb2);
 
