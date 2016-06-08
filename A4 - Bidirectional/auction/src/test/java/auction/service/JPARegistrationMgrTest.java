@@ -45,11 +45,6 @@ public class JPARegistrationMgrTest {
     public void getUser() {
         User user1 = registrationMgr.registerUser("xxx5@yyy5");
 
-        //  Extra regels om er voor te zorgen dat de user ook echt geregistreerd wordt
-        EntityManager em = Persistence.createEntityManagerFactory("Auction").createEntityManager();
-        em.getTransaction().begin();
-        em.getTransaction().commit();
-
         User userGet = registrationMgr.getUser("xxx5@yyy5");
         assertSame(userGet, user1);
         assertNull(registrationMgr.getUser("aaa4@bb5"));
