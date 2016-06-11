@@ -1,11 +1,13 @@
 package auction.service;
 
+import java.sql.SQLException;
 import java.util.*;
 
 import auction.dao.UserDAOJPAImpl;
 import auction.domain.User;
 import auction.dao.UserDAOCollectionImpl;
 import auction.dao.UserDAO;
+import auction.util.DatabaseCleaner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

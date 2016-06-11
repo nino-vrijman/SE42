@@ -4,6 +4,7 @@ import auction.dao.*;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import nl.fontys.util.Money;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -54,5 +55,15 @@ public class SellerMgr {
             em.getTransaction().commit();
             return true;
         }
+    }
+
+    //  Aan de client kant wordt er geprobeerd om een nieuwe Category aan te maken maar dat moet hier aan de serverkant
+    //  gebeuren, hetzelfde geld voor Money.
+    public Category newCategory(String description) {
+        return new Category(description);
+    }
+
+    public Money newMoney(long cents, String currency) {
+        return new Money(cents, currency);
     }
 }
