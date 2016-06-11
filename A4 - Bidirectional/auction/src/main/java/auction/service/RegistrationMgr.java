@@ -46,8 +46,6 @@ public class RegistrationMgr {
 
         User user = userDAO.findByEmail(email);
 
-        //em.getTransaction().commit();
-
         if (user != null) {
             return user;
         }
@@ -56,7 +54,6 @@ public class RegistrationMgr {
 
         userDAO.create(user);
 
-        //  TODO dezelfde verplaatsen naar boven if user != null
         em.getTransaction().commit();
 
         return user;

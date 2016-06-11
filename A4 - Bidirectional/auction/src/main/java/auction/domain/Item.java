@@ -17,7 +17,7 @@ public class Item implements Comparable {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(cascade = {CascadeType.ALL})
+    @ManyToOne(cascade = {CascadeType.MERGE})
     private User seller;
 
     @Embedded
@@ -29,7 +29,7 @@ public class Item implements Comparable {
 
     private String description;
 
-    @OneToOne (cascade = {CascadeType.ALL})
+    @OneToOne (cascade = {CascadeType.MERGE})
     private Bid highest;
 
     public Item() {}

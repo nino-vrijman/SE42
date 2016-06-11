@@ -24,6 +24,10 @@ public class Bid {
 
     private User buyer;
 
+    @OneToOne(mappedBy = "highest")
+    @JoinColumn(nullable = false)
+    private Item item;
+
     @Embedded
     @AttributeOverrides({
             @AttributeOverride(name = "currency",
@@ -52,5 +56,13 @@ public class Bid {
 
     public Money getAmount() {
         return amount;
+    }
+
+    public Item getItem() {
+        return this.item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

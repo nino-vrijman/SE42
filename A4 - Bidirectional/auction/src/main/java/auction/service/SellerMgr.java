@@ -33,8 +33,9 @@ public class SellerMgr {
         em.getTransaction().begin();
         if (userDAO.findByEmail(seller.getEmail()) == null)
             userDAO.create(seller);
-        //  TODO eventueel nieuwe user toevoegen als deze nog niet bestaat
         itemDAO.create(item);
+        //  Onderstaande regel toegevoegd in Assignment 4
+        seller.addItem(item);
         em.getTransaction().commit();
         return item;
     }

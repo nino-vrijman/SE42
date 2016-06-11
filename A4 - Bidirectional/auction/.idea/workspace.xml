@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5cd4265-f5ac-44fb-bb72-2c2886c8d368" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/auction/service/ItemsFromSellerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/domain/Bid.class" afterPath="$PROJECT_DIR$/target/classes/auction/domain/Bid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/domain/Bid_.class" afterPath="$PROJECT_DIR$/target/classes/auction/domain/Bid_.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/domain/Item.class" afterPath="$PROJECT_DIR$/target/classes/auction/domain/Item.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/domain/User.class" afterPath="$PROJECT_DIR$/target/classes/auction/domain/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/domain/User_.class" afterPath="$PROJECT_DIR$/target/classes/auction/domain/User_.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/service/AuctionMgr.class" afterPath="$PROJECT_DIR$/target/classes/auction/service/AuctionMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/service/RegistrationMgr.class" afterPath="$PROJECT_DIR$/target/classes/auction/service/RegistrationMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auction/service/SellerMgr.class" afterPath="$PROJECT_DIR$/target/classes/auction/service/SellerMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/auction/service/JPARegistrationMgrTest.class" afterPath="$PROJECT_DIR$/target/test-classes/auction/service/JPARegistrationMgrTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../A3 - Associations (basis A6)/auction/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../A3 - Associations (basis A6)/auction/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/domain/Bid.java" afterPath="$PROJECT_DIR$/src/main/java/auction/domain/Bid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/domain/Item.java" afterPath="$PROJECT_DIR$/src/main/java/auction/domain/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/auction/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java" afterPath="$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java" afterPath="$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java" afterPath="$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Bid_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Bid_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Category_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Category_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Item_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/Item_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/User_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/auction/domain/User_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/nl/fontys/util/FontysTime_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/nl/fontys/util/FontysTime_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/nl/fontys/util/Money_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/nl/fontys/util/Money_.java" />
     </list>
     <ignored path="auction.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,37 +69,108 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/AuctionMgrTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="111" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JPARegistrationMgrTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/JPARegistrationMgrTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SellerMgrTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SellerMgrTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/SellerMgrTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21888413">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationMgrTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/RegistrationMgrTest.java">
+      <file leaf-file-name="Bid.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Bid.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+              <folding>
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#1490#1491#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemsFromSellerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/ItemsFromSellerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="173" column="120" selection-start-line="173" selection-start-column="120" selection-end-line="173" selection-end-column="120" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SellerMgr.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.66714287">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseCleaner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/util/DatabaseCleaner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationMgr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuctionMgr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -110,19 +204,20 @@
         <option value="$PROJECT_DIR$/src/main/java/nl/fontys/util/Money.java" />
         <option value="$PROJECT_DIR$/src/main/java/auction/dao/BidDAOJPAImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/util/DatabaseCleaner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/domain/Bid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/auction/domain/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/auction/dao/ItemDAOJPAImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/domain/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java" />
         <option value="$PROJECT_DIR$/src/test/java/auction/service/SellerMgrTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/auction/service/RegistrationMgrTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/auction/service/AuctionMgrTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/auction/service/JPARegistrationMgrTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/domain/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/domain/Bid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/auction/service/ItemsFromSellerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java" />
       </list>
     </option>
   </component>
@@ -198,6 +293,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,14 +520,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Fontys/Jaar 2/SE42/SE42-master/auction assignment 4 + 5/auction" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -475,58 +570,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="AuctionMgrTest.getItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="auction.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="auction" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="auction.service" />
-      <option name="MAIN_CLASS_NAME" value="auction.service.AuctionMgrTest" />
-      <option name="METHOD_NAME" value="getItem" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="AuctionMgrTest.newBid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="auction.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="auction" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="auction.service" />
-      <option name="MAIN_CLASS_NAME" value="auction.service.AuctionMgrTest" />
-      <option name="METHOD_NAME" value="newBid" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="auction.service in auction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -553,7 +596,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="AuctionMgrTest.cleanUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ItemsFromSellerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="auction.service.*" />
@@ -564,8 +607,60 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="auction.service" />
-      <option name="MAIN_CLASS_NAME" value="auction.service.AuctionMgrTest" />
-      <option name="METHOD_NAME" value="cleanUp" />
+      <option name="MAIN_CLASS_NAME" value="auction.service.ItemsFromSellerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="JPARegistrationMgrTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="auction.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="auction" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="auction.service" />
+      <option name="MAIN_CLASS_NAME" value="auction.service.JPARegistrationMgrTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ItemsFromSellerTest.numberOfOfferdItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="auction.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="auction" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="auction.service" />
+      <option name="MAIN_CLASS_NAME" value="auction.service.ItemsFromSellerTest" />
+      <option name="METHOD_NAME" value="numberOfOfferdItems" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -956,18 +1051,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.getItem" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.newBid" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.auction.service in auction" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.cleanUp" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.auction.service in auction" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ItemsFromSellerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JPARegistrationMgrTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ItemsFromSellerTest.numberOfOfferdItems" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.auction.service in auction" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.cleanUp" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.newBid" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest.getItem" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ItemsFromSellerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ItemsFromSellerTest.numberOfOfferdItems" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JPARegistrationMgrTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AuctionMgrTest" />
       </list>
     </recent_temporary>
   </component>
@@ -989,47 +1084,49 @@
       <workItem from="1465322083309" duration="2031000" />
       <workItem from="1465329658113" duration="448000" />
       <workItem from="1465372426246" duration="94000" />
+      <workItem from="1465658288481" duration="3887000" />
+      <workItem from="1465663792964" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 20m 19s.xml">
+    <history-entry file="ItemsFromSellerTest - 2016.06.11 at 18h 25m 55s.xml">
+      <configuration name="ItemsFromSellerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest - 2016.06.11 at 18h 26m 08s.xml">
+      <configuration name="ItemsFromSellerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest - 2016.06.11 at 18h 33m 56s.xml">
+      <configuration name="ItemsFromSellerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest - 2016.06.11 at 18h 43m 35s.xml">
+      <configuration name="ItemsFromSellerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest - 2016.06.11 at 18h 46m 34s.xml">
+      <configuration name="ItemsFromSellerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest_numberOfOfferdItems - 2016.06.11 at 18h 17m 37s.xml">
+      <configuration name="ItemsFromSellerTest.numberOfOfferdItems" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest_numberOfOfferdItems - 2016.06.11 at 18h 19m 01s.xml">
+      <configuration name="ItemsFromSellerTest.numberOfOfferdItems" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemsFromSellerTest_numberOfOfferdItems - 2016.06.11 at 18h 20m 13s.xml">
+      <configuration name="ItemsFromSellerTest.numberOfOfferdItems" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="auction_service_in_auction - 2016.06.11 at 18h 27m 59s.xml">
       <configuration name="auction.service in auction" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 20m 25s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 20m 39s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 21m 46s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 23m 47s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 26m 05s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 20h 26m 47s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 22h 01m 56s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 22h 03m 12s.xml">
-      <configuration name="auction.service in auction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="auction_service_in_auction - 2016.06.07 at 22h 03m 43s.xml">
+    <history-entry file="auction_service_in_auction - 2016.06.11 at 18h 48m 41s.xml">
       <configuration name="auction.service in auction" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25039000" />
+    <option name="totallyTimeSpent" value="28932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1041,7 +1138,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21208227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21208227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1071,7 +1168,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/auction/domain/User.java</url>
+          <line>46</line>
+          <properties class="auction.domain.User" method="numberOfOfferedItems" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1080,13 +1185,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/dao/ItemDAOJPAImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auction/dao/UserDAOJPAImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1099,7 +1197,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,10 +1250,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2239#2240#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,7 +1273,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,7 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,14 +1385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/util/DatabaseCleaner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5">
@@ -1301,13 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="27" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Bid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1332,13 +1421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auction/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1353,30 +1435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b62df85f/49588dd7-75e2-4011-8bbd-3ef3c0228172/fontys.bid">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b62df85f/49588dd7-75e2-4011-8bbd-3ef3c0228172/fontys.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.5.0-SNAPSHOT/eclipselink-2.5.0-20130507.225215-1639-sources.jar!/org/eclipse/persistence/jpa/PersistenceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.972973">
@@ -1384,26 +1442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auction/dao/UserDAOJPAImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1422,50 +1464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2239#2240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b62df85f/49588dd7-75e2-4011-8bbd-3ef3c0228172/fontys.item">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/AuctionMgrTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/JPARegistrationMgrTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,14 +1475,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7711016">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/util/DatabaseCleaner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/RegistrationMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/SellerMgrTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21888413">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Bid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/AuctionMgrTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="111" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/domain/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/AuctionMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/auction/service/ItemsFromSellerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="120" selection-start-line="173" selection-start-column="120" selection-end-line="173" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auction/service/SellerMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66714287">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding />
         </state>
       </provider>

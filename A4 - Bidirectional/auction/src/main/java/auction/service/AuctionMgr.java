@@ -57,11 +57,25 @@ public class AuctionMgr  {
      *         amount niet hoger was dan het laatste bod, dan null
      */
     public Bid newBid(Item item, User buyer, Money amount) {
+        //  oude code-
+        /*
         Bid bid = item.newBid(buyer, amount);
         if (bid != null) {
             em.getTransaction().begin();
+            //  Regel code toegevoegd om Item aan een Bid toe te voegen net zoals we dat met User en Item hebben gedaan
+            bid.setItem(item);
             this.bidDAO.create(bid);
             this.itemDAO.edit(item);
+            em.getTransaction().commit();
+        }
+        return bid;
+        */
+        Bid bid = item.newBid(buyer, amount);
+        if (bid != null) {
+            em.getTransaction().begin();;
+            this.itemDAO.edit(item);
+            bid.setItem(item);
+            this.bidDAO.create(bid);
             em.getTransaction().commit();
         }
         return bid;
