@@ -2,8 +2,11 @@ package auction.webserviceserver;
 
 import auction.domain.User;
 import auction.service.RegistrationMgr;
+import auction.util.DatabaseCleaner;
 
 import javax.jws.WebService;
+import javax.persistence.Persistence;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -28,5 +31,17 @@ public class RegistrationWS {
 
     public List<User> getUsers() {
         return this.registrationMgr.getUsers();
+    }
+
+    /**
+     * Ter vervanging van de database cleaner zoals die in de andere unit tests ook worden gebruikt
+     */
+    public void clean() {
+        DatabaseCleaner dbCleaner = new DatabaseCleaner(Persistence.createEntityManagerFactory("Auction").createEntityManager());
+        try {
+            dbCleaner.clean();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

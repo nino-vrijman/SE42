@@ -42,24 +42,33 @@ public interface AuctionWS {
 
     /**
      * 
-     * @param arg2
-     * @param arg1
      * @param arg0
      * @return
-     *     returns webservicegen.Bid
+     *     returns webservicegen.Category
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "newBid", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewBid")
-    @ResponseWrapper(localName = "newBidResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewBidResponse")
-    @Action(input = "http://webserviceserver.auction/AuctionWS/newBidRequest", output = "http://webserviceserver.auction/AuctionWS/newBidResponse")
-    public Bid newBid(
+    @RequestWrapper(localName = "newCategory", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewCategory")
+    @ResponseWrapper(localName = "newCategoryResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewCategoryResponse")
+    @Action(input = "http://webserviceserver.auction/AuctionWS/newCategoryRequest", output = "http://webserviceserver.auction/AuctionWS/newCategoryResponse")
+    public Category newCategory(
         @WebParam(name = "arg0", targetNamespace = "")
-        Item arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        User arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        Money arg2);
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "revokeItem", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.RevokeItem")
+    @ResponseWrapper(localName = "revokeItemResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.RevokeItemResponse")
+    @Action(input = "http://webserviceserver.auction/AuctionWS/revokeItemRequest", output = "http://webserviceserver.auction/AuctionWS/revokeItemResponse")
+    public boolean revokeItem(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Item arg0);
 
     /**
      * 
@@ -81,36 +90,6 @@ public interface AuctionWS {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "revokeItem", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.RevokeItem")
-    @ResponseWrapper(localName = "revokeItemResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.RevokeItemResponse")
-    @Action(input = "http://webserviceserver.auction/AuctionWS/revokeItemRequest", output = "http://webserviceserver.auction/AuctionWS/revokeItemResponse")
-    public boolean revokeItem(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Item arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns webservicegen.Category
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "newCategory", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewCategory")
-    @ResponseWrapper(localName = "newCategoryResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewCategoryResponse")
-    @Action(input = "http://webserviceserver.auction/AuctionWS/newCategoryRequest", output = "http://webserviceserver.auction/AuctionWS/newCategoryResponse")
-    public Category newCategory(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param arg2
      * @param arg1
      * @param arg0
@@ -129,6 +108,27 @@ public interface AuctionWS {
         Category arg1,
         @WebParam(name = "arg2", targetNamespace = "")
         String arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns webservicegen.Bid
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "newBid", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewBid")
+    @ResponseWrapper(localName = "newBidResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.NewBidResponse")
+    @Action(input = "http://webserviceserver.auction/AuctionWS/newBidRequest", output = "http://webserviceserver.auction/AuctionWS/newBidResponse")
+    public Bid newBid(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Item arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        User arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        Money arg2);
 
     /**
      * 

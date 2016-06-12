@@ -1,5 +1,6 @@
 package auction.webservice;
 
+import org.junit.After;
 import org.junit.Test;
 import webservicegen.*;
 import java.util.List;
@@ -45,9 +46,19 @@ public class AuctionWebTest {
         return auctionWS.newBid(item, buyer, amount);
     }
 
-    private Money newMoney(long cents, String currency) {
+    private static Money newMoney(long cents, String currency) {
         auctionWS = auctionWSService.getAuctionWSPort();
         return auctionWS.newMoney(cents, currency);
+    }
+
+    private static void clean() {
+        registrationWS = registrationWSService.getRegistrationWSPort();
+        registrationWS.clean();
+    }
+
+    @After
+    public void cleanUp() {
+        clean();
     }
 
     @Test

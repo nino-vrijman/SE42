@@ -28,6 +28,16 @@ public class RegistrationWebTest {
         return registrationWS.getUsers();
     }
 
+    private static void clean() {
+        registrationWS = registrationWSService.getRegistrationWSPort();
+        registrationWS.clean();
+    }
+
+    @After
+    public void cleanUp() {
+        clean();
+    }
+
     @Test
     public void registerUser() {
         User user1 = registerUser("xxx1@yyy");
@@ -51,12 +61,36 @@ public class RegistrationWebTest {
         User userGet = getUser("xxx5@yyy5");
 
         //  Volledige objecten kunnen nooit same zijn omdat deze via de webservice aangemaakt worden en dus geen
-        //  verwijzingen naar dezelfde plek in het gehuegen zijn.
+        //  verwijzingen naar dezelfde plek in het geheugen zijn.
         //assertSame(userGet, user1);
         assertEquals(userGet.getId(), user1.getId());
 
         assertNull(getUser("aaa4@bb5"));
         registerUser("abc");
         assertNull(getUser("abc"));
+    }
+
+    @Test
+    public void getUsersTest() {
+        List<User> users = getUsers();
+        assertEquals(0, users.size());
+
+        User user1 = registerUser("xxx8@yyy");
+        users = getUsers();
+        assertEquals(1, users.size());
+        //  Volledige objecten kunnen nooit same zijn omdat deze via de webservice aangemaakt worden en dus geen
+        //  verwijzingen naar dezelfde plek in het geheugen zijn.
+        //assertSame(users.get(0), user1);
+        assertEquals(users.get(0).getId(), user1.getId());
+
+
+        User user2 = registerUser("xxx9@yyy");
+        users = getUsers();
+        assertEquals(2, users.size());
+
+        registerUser("abc");
+        //geen nieuwe user toegevoegd, dus gedrag hetzelfde als hiervoor
+        users = getUsers();
+        assertEquals(2, users.size());
     }
 }

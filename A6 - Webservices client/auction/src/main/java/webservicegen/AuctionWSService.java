@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "AuctionWSService", targetNamespace = "http://webserviceserver.auction/", wsdlLocation = "http://localhost:8086/auction?wsdl")
+@WebServiceClient(name = "AuctionWSService", targetNamespace = "http://webserviceserver.auction/", wsdlLocation = "http://localhost:8080/auction?wsdl")
 public class AuctionWSService
     extends Service
 {
@@ -30,7 +30,7 @@ public class AuctionWSService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8086/auction?wsdl");
+            url = new URL("http://localhost:8080/auction?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

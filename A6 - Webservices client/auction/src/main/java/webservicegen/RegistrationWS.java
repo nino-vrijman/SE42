@@ -27,6 +27,15 @@ public interface RegistrationWS {
 
     /**
      * 
+     */
+    @WebMethod
+    @RequestWrapper(localName = "clean", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.Clean")
+    @ResponseWrapper(localName = "cleanResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.CleanResponse")
+    @Action(input = "http://webserviceserver.auction/RegistrationWS/cleanRequest", output = "http://webserviceserver.auction/RegistrationWS/cleanResponse")
+    public void clean();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns webservicegen.User
@@ -42,6 +51,18 @@ public interface RegistrationWS {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<webservicegen.User>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUsers", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.GetUsers")
+    @ResponseWrapper(localName = "getUsersResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.GetUsersResponse")
+    @Action(input = "http://webserviceserver.auction/RegistrationWS/getUsersRequest", output = "http://webserviceserver.auction/RegistrationWS/getUsersResponse")
+    public List<User> getUsers();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns webservicegen.User
@@ -54,17 +75,5 @@ public interface RegistrationWS {
     public User getUser(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<webservicegen.User>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getUsers", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.GetUsers")
-    @ResponseWrapper(localName = "getUsersResponse", targetNamespace = "http://webserviceserver.auction/", className = "webservicegen.GetUsersResponse")
-    @Action(input = "http://webserviceserver.auction/RegistrationWS/getUsersRequest", output = "http://webserviceserver.auction/RegistrationWS/getUsersResponse")
-    public List<User> getUsers();
 
 }
