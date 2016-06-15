@@ -1,10 +1,8 @@
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.security.PublicKey;
+import java.io.ObjectOutputStream;
+import java.security.*;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
@@ -15,28 +13,33 @@ public class genPublicandPrivateKey {
 
     public static void main(String[] args){
         generateKeys();
-        System.out.println("Key generated");
+        System.out.println("Keys generated");
     }
 
     public static void generateKeys(){
         try{
             KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
             keyPairGenerator.initialize(1024);
-            PublicKey publicKey = keyPairGenerator.generateKeyPair().getPublic();
-            PrivateKey privateKey = keyPairGenerator.generateKeyPair().getPrivate();
+            KeyPair keyPair = keyPairGenerator.generateKeyPair();
+            //Het creeren van de public en de private key
+            PublicKey publicKey = keyPair.getPublic();
+            PrivateKey privateKey = keyPair.getPrivate();
             writeKeys(publicKey, privateKey);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
     public static void writeKeys(PublicKey publicKey, PrivateKey privateKey){
+        ObjectOutputStream objectOutputStream;
         try {
             FileOutputStream fileOutputStream = new FileOutputStream("publicKey");
-            fileOutputStream.write(publicKey.getEncoded());
-            fileOutputStream.close();
+            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            //Het schrijven van de public key
+            objectOutputStream.writeObject(publicKey);
+            //Het schrijven van de private key
             fileOutputStream = new FileOutputStream("privateKey");
-            fileOutputStream.write(privateKey.getEncoded());
-            fileOutputStream.close();
+            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(privateKey);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/A7AllApplications.iml" filepath="$PROJECT_DIR$/A7AllApplications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A7ProgramThree/A7ProgramThree.iml" filepath="$PROJECT_DIR$/A7ProgramThree/A7ProgramThree.iml" />
     </modules>
   </component>
 </project>
